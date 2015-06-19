@@ -1,0 +1,16 @@
+{
+  "name": "alt-test",
+  "dependencies": {
+    "alt": "^0.16.0",
+    "react": "^0.12.2"
+  },
+  "devDependencies": {
+    "alt": "~0.16.10",
+    "browserify": "~10.2.4",
+    "reactify": "~1.1.1"
+  },
+  "scripts": {
+    "build": "browserify -t [reactify --es6] source/app.jsx > build/app.js",
+    "start": "npm run build && open 'index.html' "
+  }
+}

@@ -16,7 +16,7 @@ var mockData = [
   { id: 12, name: 'San Francisco' }
 ];
 
-var LocationSource = {
+var LocationFetcher = {
   fetchLocations() {
     console.log('fetchLocations');
     return {
@@ -52,4 +52,4 @@ var LocationSource = {
   }
 };
 
-module.exports = LocationSource;
+module.exports = LocationFetcher;

@@ -37,19 +37,11 @@ var AllLocations = React.createClass({
 
 var Locations = React.createClass({
   componentDidMount() {
-
-    console.log('componentDidMount');
-    // we’ll want to listen to changes once the state in the store is updated
-    LocationStore.listen(this.onChange);
-
-    LocationActions.fetchLocations();
+    console.log('componentDidMount', this.state);
+    LocationStore.fetchLocations();
   },
-  componentWillUnmount() {
-    LocationStore.unlisten(this.onChange);
-  },
-  render: function() {
-    console.log('locations render');
 
+  render() {
     return (
       <div>
         <h1>Locations</h1>

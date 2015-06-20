@@ -21,10 +21,13 @@ var LocationSource = {
     console.log('fetchLocations');
     return {
       remote() {
+        console.log('remote');
         return new Promise(function (resolve, reject) {
           // simulate an asynchronous flow where data is fetched on
           // a remote server somewhere.
           setTimeout(function () {
+
+            console.log('setTimeout callback');
 
             // change this to `false` to see the error action being handled.
             if (true) {

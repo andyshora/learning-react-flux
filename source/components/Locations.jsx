@@ -37,6 +37,8 @@ var AllLocations = React.createClass({
 
 var Locations = React.createClass({
   componentDidMount() {
+
+    console.log('componentDidMount');
     // we’ll want to listen to changes once the state in the store is updated
     LocationStore.listen(this.onChange);
 
@@ -46,11 +48,7 @@ var Locations = React.createClass({
     LocationStore.unlisten(this.onChange);
   },
   render: function() {
-    if (this.state.errorMessage) {
-      return (
-        <div>Something is Wrong</div>
-      );
-    }
+    console.log('locations render');
 
     return (
       <div>

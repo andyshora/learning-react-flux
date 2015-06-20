@@ -5,12 +5,12 @@
     "react": "^0.12.2"
   },
   "devDependencies": {
-    "alt": "~0.16.10",
     "browserify": "~10.2.4",
+    "exorcist": "^0.4.0",
     "reactify": "~1.1.1"
   },
   "scripts": {
-    "build": "browserify -t [reactify --es6] source/app.jsx > build/app.js",
+    "build": "browserify -t [reactify --es6] source/app.jsx --debug | exorcist build/app.js.map > build/app.js",
     "start": "npm run build && open 'index.html' "
   }
 }

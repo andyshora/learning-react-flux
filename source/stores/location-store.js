@@ -11,6 +11,8 @@ class LocationStore {
     this.locations = [];
     this.errorMessage = null;
 
+    console.log('bind listeners');
+
     // bind our action handlers to our actions defined below
     this.bindListeners({
       handleUpdateLocations: LocationActions.UPDATE_LOCATIONS,
@@ -27,11 +29,13 @@ class LocationStore {
 
   // action handlers
   handleUpdateLocations(locations) {
+    console.log('handleUpdateLocations', locations);
     this.locations = locations;
     this.errorMessage = null;
   }
 
   handleFetchLocations() {
+    console.log('handleFetchLocations');
     // reset the array while we're fetching new locations so React can
     // be smart and render a spinner for us since the data is empty.
     this.locations = [];
